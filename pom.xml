@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 基本信息 -->
+    <description>springboot学习笔记</description>
+    <modelVersion>4.0.0</modelVersion>
+    <name>spring-boot-learns</name>
+    <!--
+         packing默认是jar类型
+         pom 夫类型都为pom类型，它生成的构建只是它本身，没有任何代码需要测试或编译，也没有任何资源需要处理
+         jar 内部调用或做服务使用
+         war 需要部署的项目
+         -->
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <!-- 作为这个聚合项目的父工程 -->
+    <groupId>spring.boot.learns</groupId>
+    <artifactId>SpringBootLearns</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 继承说明、继承spring-boot提供的父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.12</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 模块说明、声明多个子模块-->
+    <modules>
+        <module>learn-core</module>
+
+        <module>learn-basic</module>
+        <module>learn-log-log4j</module>
+        <module>learn-log-log4j2</module>
+        <module>learn-websocket</module>
+    </modules>
+
+</project>

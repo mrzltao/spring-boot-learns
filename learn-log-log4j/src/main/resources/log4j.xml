@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+    <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="consolePattern" value="%d{DATE} %-4r [%t] %-5p %c %x - %m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="levelMin" value="DEBUG"/>
+            <param name="levelMax" value="ERROR"/>
+        </filter>
+    </appender>
+
+    <logger name="learn.log.log4j.learnloglog4j" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+</log4j:configuration>

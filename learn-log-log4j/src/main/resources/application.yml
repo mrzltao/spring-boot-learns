@@ -1,0 +1,10 @@
+server:
+  port: 6002
+
+spring:
+  application:
+    name: learn-log-log4j
+
+logging:
+  config: classpath:log4j.xml
+
