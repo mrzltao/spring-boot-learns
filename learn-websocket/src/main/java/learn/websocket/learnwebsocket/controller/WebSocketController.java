@@ -4,18 +4,15 @@ import learn.websocket.learnwebsocket.model.GetInMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
-
-import java.time.LocalDateTime;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @title: WebSocketController
- * @Description TODO
- * @Author ZLT
+ * @Description TODORest@Author ZLT
  * @Date: 2021/12/6 10:13
  * @Version 1.0
  */
-@Controller
+@RestController
 public class WebSocketController {
 
     @Autowired
