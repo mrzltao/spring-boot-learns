@@ -1,8 +1,10 @@
 package learn.websocket.learnwebsocket.controller;
 
 import learn.websocket.learnwebsocket.model.GetInMessage;
+import learn.websocket.learnwebsocket.model.GetOutMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,5 +30,11 @@ public class WebSocketController {
     @MessageMapping("/toOne")
     public void toOne(GetInMessage in) throws Exception{
         template.convertAndSendToUser(in.getTo(),"/message",in.toString());
+    }
+
+    @MessageMapping("/getInfo")
+    @SendTo("/topic/get")
+    public GetOutMessage getInfo(GetInMessage in){
+        return new GetOutMessage(in.getContext());
     }
 }
