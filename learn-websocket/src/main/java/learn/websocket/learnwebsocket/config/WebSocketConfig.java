@@ -21,12 +21,14 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
      * 注册websocket端点（基站）
      * 发布或订阅消息时，需要先连接此端点
      * setAllowedOrigins("*") 可有可无；*表示允许其他域进行访问
+     *      注：若使用setAllowedOrigins报错的情况下将setAllowedOrigins换成setAllowedOriginPatterns
      * withSockJS 表示开启sockjs支持
      * @param registry
      */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("oneToOne").setAllowedOrigins("*").withSockJS();//点对点端点
+        //registry.addEndpoint("oneToOne").setAllowedOrigins("*").withSockJS();//点对点端点
+        registry.addEndpoint("oneToOne").setAllowedOriginPatterns("*").withSockJS();
         registry.addEndpoint("broadcast").withSockJS();//广播端点
     }
 

@@ -41,7 +41,7 @@
             var name = document.getElementById('name').value;
             var context = document.getElementById('context').value;
             console.info(name);
-            stompClient.send("/oneToBroadcast", {}, JSON.stringify({ 'name': name, 'context': context }));
+            stompClient.send("/info/oneToBroadcast", {}, JSON.stringify({ 'name': name, 'context': context }));
         }
     </script>
 </head>

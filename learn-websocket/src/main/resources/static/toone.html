@@ -19,7 +19,10 @@
       stompClient.connect({}, function(frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
+        //convertAndSendToUser的路径拼接方式
         stompClient.subscribe('/user/'+document.getElementById('from').value+'/message', function(response){
+        //convertAndSend的路劲拼接方式
+        //stompClient.subscribe('/user/message/'+document.getElementById('from').value, function(response){
           var response1 = document.getElementById('response');
           var p = document.createElement('p');
           p.style.wordWrap = 'break-word';
@@ -44,7 +47,7 @@
       var name = document.getElementById('name').value;
       var context = document.getElementById('context').value;
       console.info(name+"发送信息"+context);
-      stompClient.send("/toOne", {}, JSON.stringify({ 'from': from, 'to': to, 'name': name, 'context': context}));
+      stompClient.send("/info/toOne", {}, JSON.stringify({ 'from': from, 'to': to, 'name': name, 'context': context}));
     }
   </script>
 </head>
