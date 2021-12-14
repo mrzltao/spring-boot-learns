@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>learn-core</groupId>
     <artifactId>learn-core</artifactId>
 
     <properties>

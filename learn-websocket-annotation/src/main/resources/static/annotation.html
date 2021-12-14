@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annotation Broadcast Demo</title>
+    <script type="text/javascript">
+        var websocket = null;
+        if('WebSocket' in window){
+            websocket=new WebSocket("ws://localhost:6005/ws/test");
+        }else{
+            console.log("Not Found WebSocket");
+        }
+
+        //建立连接回调函数
+        websocket.onopen=function (event){
+            setMessage("建立连接");
+        }
+        //关闭连接回调函数
+        websocket.onclose=function (event){
+            setMessage("关闭连接");
+        }
+        //发送消息回调函数
+        websocket.onmessage=function (event){
+            setMessage("发送消息："+ event.data);
+        }
+        //出现错误回调函数
+        websocket.onerror=function (event){
+            setMessage("错误");
+        }
+        function setMessage(innerHTML) {
+            document.getElementById('div_msg').innerHTML += innerHTML + '<br/>';
+        }
+
+        function sendto(){
+            var _txtMsg=document.getElementById("txtMsg").value;
+            console.log(_txtMsg);
+            websocket.send(_txtMsg);
+        }
+        function closeto(){
+            websocket.close();
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txtMsg" />
+<button onclick="sendto()">发送消息</button>
+<button onclick="closeto()">断开连接</button>
+<div id="div_msg"></div>
+</body>
+</html>

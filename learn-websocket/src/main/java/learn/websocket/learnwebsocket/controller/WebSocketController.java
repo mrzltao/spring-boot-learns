@@ -30,6 +30,7 @@ public class WebSocketController {
     public void oneToBroadcast(GetInMessage in) throws Exception{
         in.setFrom(in.getName());
         in.setTo("全体成员");
+        System.out.println("WebSocketController ------ oneToBroadcast");
         //template.convertAndSend("/topic/getResponse", in.toString());
         webSocketService.broadcast(in);
     }
