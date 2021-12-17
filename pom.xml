@@ -40,6 +40,8 @@
         <module>learn-log-log4j</module>
         <module>learn-log-log4j2</module>
         <module>learn-websocket</module>
+        <module>learn-websocket-annotation</module>
+        <module>learn-statics</module>
     </modules>
 
 </project>

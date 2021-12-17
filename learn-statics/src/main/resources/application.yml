@@ -1,0 +1,7 @@
+server:
+  port: 6006
+spring:
+  application:
+    name: learn-statics
+  mvc:
+    static-path-pattern: /stic/**
