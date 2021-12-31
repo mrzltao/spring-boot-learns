@@ -42,6 +42,17 @@
         <module>learn-websocket</module>
         <module>learn-websocket-annotation</module>
         <module>learn-statics</module>
+        <module>learn-statics-thymeleaf</module>
+        <module>learn-redis</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>1.18.10</scope>
+        </dependency>
+
+    </dependencies>
 
 </project>

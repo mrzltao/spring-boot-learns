@@ -1,0 +1,61 @@
+iot:
+  mysql:
+    ip: 192.168.1.22
+    port: 3306
+    driverClassName: com.mysql.cj.jdbc.Driver
+    database: wms_soma
+    username: root
+    password: 123456
+  database:
+    isBlockAttack: false
+  sqlserver:
+    username: sa
+    password: sa123456!
+    ip: 127.0.0.1
+    port: 1433
+    database: wms_soma
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+spring:
+  profiles: dev
+  datasource:
+    username: sa
+    password: sa123456!
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=wms_soma
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    name: datasource
+    druid:
+      initial-size: 10
+      max-active: 100
+      max-wait: 60000
+      min-idle: 10
+      validation-query: SELECT 1
+      test-on-borrow: false
+      test-on-return: false
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      time-between-eviction-runs-millis: 30000
+      max-pool-prepared-statement-per-connection-size: 20
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+    initial-size: 10
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 5GB      # 限制单个文件的最大值
+      max-request-size: 50GB   # 限制上传的多个文件的总大小
+
+mybatis-plus:
+  mapper-locations: /com/shooin/*/mapper/xml/*.xml
+  typeAliasesPackage: com.shooin.*.entity
+  global-config:
+    db-config:
+      id-type: INPUT
+      insert-strategy: NOT_NULL
+      update-strategy: NOT_NULL
+      select-strategy: NOT_EMPTY
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    jdbc-type-for-null: 'null'
