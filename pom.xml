@@ -44,6 +44,7 @@
         <module>learn-statics</module>
         <module>learn-statics-thymeleaf</module>
         <module>learn-redis</module>
+        <module>learn-rabbitmq</module>
     </modules>
 
     <dependencies>
