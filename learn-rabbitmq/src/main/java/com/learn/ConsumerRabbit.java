@@ -6,7 +6,7 @@ import com.rabbitmq.client.*;
 /**
  * @Title ConsumerRabbit
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/4 14:50
  * @Version 1.0
  */

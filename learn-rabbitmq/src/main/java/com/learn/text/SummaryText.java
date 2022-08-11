@@ -3,7 +3,7 @@ package com.learn.text;
 /**
  * @Title SummaryText
  * @Description RibbitMQ纪要
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/5 14:46
  * @Version 1.0
  */
@@ -147,6 +147,25 @@ public class SummaryText {
      *          3、消息被拒绝（消息在手动应答时进行了否定应答basicReject或basicNack）并且requeue=false
      *  延迟队列
      *      其实设置消息的TTL（存活时间）过期也是延迟队列。
+     *      基于死信队列TTL的延迟队列发送的消息在信道中会自动排队，若第一个消息的存活时间较长，则无论后面消息的存活时间是否长短，都会处于排队状态，
+     *      只有头一个消息放入死信队列之后，后面的消息才会相继被放入死信队列，来进行消费。
+     *      那么为了解决第一个消息存活时间长，后面消息存活时间短而不被先执行的问题，则可以使用基于插件（延迟队列插件rabbitmq_delayed_message_exchange）的延迟队列(x-delay-message)。
+     *          注：安装RabbitMq时是没有rabbitmq_delayed_message_exchange插件的，需要下载安装(https://www.rabbitmq.com/community-plugins.html)。
+     *              将下载下来的rabbitmq_delayed_message_exchange-3.10.2.ez文件放入RabbitMQ的plugins文件夹下。
+     *              在sbin文件夹下执行命令：rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+     *              成功后，重启RabbitMQ服务即可。
+     *      在声明插件的延迟交换机时，使用的是自定义交换机（CustomExchange）。
+     *      延迟队列在需要延迟处理的场景下非常有用，使用RabbitMQ来实现延迟队列可以很好的利用RabbitMQ的特性（消息可靠发送、消息可靠投递、死信队列来保证消息至少被消费一次、
+     *      未被正确处理的消息不会被丢弃）另外，通过RabbitMQ集群的特性，可以很好的解决单点故障问题，不会因为单个节点挂掉导致延迟队列不可用或消息丢失。
+     *  发布确认高级
+     *      在生产环境中由于一些不明的原因，导致RabbitMQ重启，在RabbitMQ重启期间造成生产者消息投递失败，导致消息丢失，需要手动处理和恢复。于是，要进行RabbitMQ的消息可靠投递，
+     *      特别是在这样的比较极端的情况下，RabbitMQ集群不可用的时候，要处理无法投递的消息。需要使用交换机和队列的回调函数。
+     *      要实现交换机和队列的回调需要实现RabbitTemplate.ConfirmCallback（交换机的回调函数）和RabbitTemplate.ReturnsCallback（队列的回调函数）
+     *      注：实现后，需要将本实现类（this）注入到RabbitTemplate中。
+     *      交换机的回调函数是无论成功接收到消息与否，都会回调。
+     *      队列的回调函数是只有没有接收到消息时，方才回调。
+     *  备份交换机
+     *      备份
      *
      */
 }

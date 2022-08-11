@@ -3,7 +3,19 @@ spring:
   rabbitmq:
     host: 192.168.1.117
     port: 5672
-    username: zlt
+    username: Ltter
     password: 123
     # 设置虚拟库时，必须以“/”开头
     virtual-host: /vhost_test
+    # 交换机的回调函数配置
+    # 发布确认类型：
+    #     none：禁用发布确认模式（默认）
+    #     correlated：发布消息成功到交换机后会出发回调函数
+    #     simple：两种效果
+    #       1、和correlated一样会出发回调函数
+    #       2、在投递消息成功后使用RabbitTemplate 调用 waitForConfirms 或 waitForConfirmsOrDie方法，等待broker返回发送结果，根据返回结果来判定下一步的逻辑。
+    #         需要注意的是：waitForConfirmsOrDie方法若返回false，则会关闭Channel(信道)。接下来无法发送消息到broker
+    publisher-confirm-type: correlated
+    # 回退消息：Mandatory参数   发布回退：true回退 false不回退
+    #   生产者发送一条消息到交换机，当交换机将消息路由（投递）到队列时，若该消息不可路由（无法投递到交换机）；false则将该消息直接丢失；true将消息返还给生产者。
+    publisher-returns: true

@@ -10,7 +10,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * @Title RabbitConnectionUtils
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/4 13:55
  * @Version 1.0
  */
@@ -60,7 +60,7 @@ public class RabbitConnectionUtils {
         //设置端口
         factory.setPort(5672);
         //用户名
-        factory.setUsername("zlt");
+        factory.setUsername("Ltter");
         //密码
         factory.setPassword("123");
         //设置虚拟库

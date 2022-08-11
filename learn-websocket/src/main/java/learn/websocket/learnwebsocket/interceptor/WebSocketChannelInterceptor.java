@@ -7,7 +7,7 @@ import org.springframework.messaging.support.ChannelInterceptor;
 /**
  * @title: WebSocketChannelInterceptor
  * @Description 频道拦截器
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/8 16:13
  * @Version 1.0
  */

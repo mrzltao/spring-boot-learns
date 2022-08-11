@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * @Title TtlDelayConfig
  * @Description 基于过期时间死信队列的延迟队列
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/10 15:08
  * @Version 1.0
  */

@@ -12,7 +12,7 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 /**
  * @title: WebSocketConfig
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/3 10:49
  * @Version 1.0
  */

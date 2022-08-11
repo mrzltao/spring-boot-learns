@@ -16,7 +16,7 @@ import java.security.cert.X509Certificate;
 /**
  * @title: SSLClient
  * @Description 用于进行Https请求的HttpClient
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/3 10:13
  * @Version 1.0
  */

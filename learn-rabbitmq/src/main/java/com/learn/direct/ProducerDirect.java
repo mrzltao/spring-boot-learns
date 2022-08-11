@@ -7,7 +7,7 @@ import com.rabbitmq.client.Channel;
 /**
  * @Title ProducerDirect
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/8 16:52
  * @Version 1.0
  */

@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @title: WebSocketUtils
  * @Description 自己对自己发送消息
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/8 9:27
  * @Version 1.0
  */

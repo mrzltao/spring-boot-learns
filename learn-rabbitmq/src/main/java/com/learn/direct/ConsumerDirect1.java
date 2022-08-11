@@ -8,7 +8,7 @@ import com.rabbitmq.client.DeliverCallback;
 /**
  * @Title ConsumerNormal
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/9 10:14
  * @Version 1.0
  */

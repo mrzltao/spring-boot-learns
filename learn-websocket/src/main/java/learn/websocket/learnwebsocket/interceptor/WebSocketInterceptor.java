@@ -16,7 +16,7 @@ import java.util.Map;
  * @title: WebSocketInterceptor
  * @Description http握手拦截器，可以通过这个类的方法获取到request、reponse
  *              拦截器需要在websocket配置文件中启用拦截器
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/7 16:35
  * @Version 1.0
  */

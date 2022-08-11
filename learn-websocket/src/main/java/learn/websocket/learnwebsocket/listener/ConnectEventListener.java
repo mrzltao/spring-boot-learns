@@ -8,7 +8,7 @@ import org.springframework.web.socket.messaging.SessionConnectEvent;
 /**
  * @title: ConnectEventListener
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/7 11:05
  * @Version 1.0
  */

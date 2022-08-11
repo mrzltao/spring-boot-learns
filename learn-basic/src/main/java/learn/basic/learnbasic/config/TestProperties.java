@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @title: TestProperties
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/11/25 14:36
  * @Version 1.0
  */

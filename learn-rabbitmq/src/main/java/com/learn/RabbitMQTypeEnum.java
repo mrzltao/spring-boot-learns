@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * @Title RabbitMQTypeEnum
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/9 9:54
  * @Version 1.0
  */

@@ -13,7 +13,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 /**
  * @title: CodeGenerator
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/17 14:00
  * @Version 1.0
  */
@@ -24,7 +24,7 @@ public class CodeGenerator {
     private static String username = "sa";
     private static String password = "sa123456!";
     private static String packagePath = "learn.basic.learnbasic.role"; //包路径
-    private static String author = "ZLT"; //作者
+    private static String author = "Ltter"; //作者
     private static String prefix = ""; //前缀
     private static String projectPath = "E:\\Shooin\\Shooin workspace\\spring-boot-learns\\learn-basic"; //项目的路径，在下面自动拼接了 /src/main/java
     private static String[] tables = {"system_role"};//生成的表

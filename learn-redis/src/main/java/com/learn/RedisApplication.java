@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @title: RedisApplication
  * @Description TODO
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/31 9:37
  * @Version 1.0
  */

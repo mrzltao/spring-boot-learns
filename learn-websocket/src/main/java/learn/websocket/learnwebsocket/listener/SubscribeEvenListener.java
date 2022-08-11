@@ -8,7 +8,7 @@ import org.springframework.web.socket.messaging.SessionSubscribeEvent;
 /**
  * @title: SubscribeEvenListener
  * @Description 订阅监听器
- * @Author ZLT
+ * @Author Ltter
  * @Date: 2021/12/7 11:01
  * @Version 1.0
  */
