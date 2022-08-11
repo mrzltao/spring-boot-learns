@@ -1,8 +1,7 @@
 package com.learn;
 
 import com.learn.utils.RabbitConnectionUtils;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.*;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -29,6 +28,11 @@ public class ProducerRabbit {
         channel.queueDeclare(RabbitConnectionUtils.QUEUE_NAME, true, false ,false,null);
         String queueMsg = "发送的一条队列消息。。。。。。。one";
 
+        //不公平分发
+        //int prefetchCount = 1;
+        //预取值   数量
+        //int prefetchCount = 2;
+        //channel.basicQos(prefetchCount);
         /**
          * 发送消息
          * 1、交换机：发送到那个交换机
@@ -37,6 +41,8 @@ public class ProducerRabbit {
          * 4、消息体
          */
         channel.basicPublish("", RabbitConnectionUtils.QUEUE_NAME, null, queueMsg.getBytes());
+        //将消息持久化（保存在磁盘上）
+        //channel.basicPublish("", RabbitConnectionUtils.QUEUE_NAME, MessageProperties.PERSISTENT_BASIC, queueMsg.getBytes());
         System.out.println("over................");
     }
 }

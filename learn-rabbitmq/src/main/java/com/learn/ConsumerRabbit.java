@@ -27,7 +27,7 @@ public class ConsumerRabbit {
              * 手动应答
              * boolean multiple:是否批量应答。false不批量应答。true批量应答。
              */
-            channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+            //channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
         };
 
         /**
@@ -46,8 +46,8 @@ public class ConsumerRabbit {
          *  3、消费者消费消息的回调
          *  4、消费者取消消费的回调
          */
-        //channel.basicConsume(RabbitConnectionUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitConnectionUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
         //手动应答
-        channel.basicConsume(RabbitConnectionUtils.QUEUE_NAME, false, deliverCallback, cancelCallback);
+        //channel.basicConsume(RabbitConnectionUtils.QUEUE_NAME, false, deliverCallback, cancelCallback);
     }
 }

@@ -17,9 +17,40 @@ import java.util.concurrent.TimeoutException;
 public class RabbitConnectionUtils {
 
     /**
-     * 队列名称
+     * 队列Queue
      */
     public static final String QUEUE_NAME = "TEST_RABBIT_ONE";
+    public static final String DIRECT_QUEUE_INFO = "TEST_DIRECT_QUEUE_RABBIT_INFO";
+    public static final String DIRECT_QUEUE_ERR = "TEST_DIRECT_QUEUE_RABBIT_ERR";
+    public static final String TOPIC_QUEUE_INFO = "TEST_DTOPIC_QUEUE_INFO";
+    public static final String TOPIC_QUEUE_ERROR = "TEST_TOPIC_QUEUE_ERROR";
+    public static final String TOPIC_QUEUE_ALL= "TOPIC_QUEUE_ALL";
+    public static final String NOMAL_QUEUE = "NOMAL_QUEUE";
+    public static final String DEAD_QUEUE = "DEAD_QUEUE";
+
+    /**
+     * routingKey
+     */
+    public static final String TOPIC_ROUTINGKEY_INFO_USR = "log.info.usr";
+    public static final String TOPIC_ROUTINGKEY_INFO_LOGIN = "log.info.login";
+    public static final String TOPIC_ROUTINGKEY_INFO_OPERATION = "log.info.operation";
+    public static final String TOPIC_ROUTINGKEY_WARN_USR = "log.warn.usr";
+    public static final String TOPIC_ROUTINGKEY_WARN_LOGIN = "log.warn.login";
+    public static final String TOPIC_ROUTINGKEY_WARN_OPERATION = "log.warn.operation";
+    public static final String TOPIC_ROUTINGKEY_ERROR_USR = "log.error.usr";
+    public static final String TOPIC_ROUTINGKEY_ERROR_LOGIN = "log.error.login";
+    public static final String TOPIC_ROUTINGKEY_ERROR_OPERATION = "log.error.operation";
+    public static final String NOMAL_ROUTINGKEY = "NOMAL_ROUTINGKEY";
+    public static final String DEAD_ROUTING = "DEAD_ROUTING";
+
+    /**
+     * 交换机Exchanges
+     */
+    public static final String FANOUT_EXCHANGES_NAME = "TEST_FANOUT_EXCHANGES_NAME";
+    public static final String DIRECT_EXCHANGES_NAME = "DIRECT_EXCHANGES_NAME";
+    public static final String TOPIC_EXCHANGES_NAME = "TOPIC_EXCHANGES_NAME";
+    public static final String NOMAL_EXCHANGE_NAME = "NOMAL_EXCHANGE_NAME";
+    public static final String DEAD_EXCHANGE_NAME = "DEAD_EXCHANGE_NAME";
 
     public static Channel createChannel() throws Exception {
         //连接工厂
