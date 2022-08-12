@@ -3,8 +3,8 @@ spring:
   rabbitmq:
     host: 192.168.1.117
     port: 5672
-    username: zlt
-    password: 123
+    username: guest
+    password: guest
     # 设置虚拟库时，必须以“/”开头
     virtual-host: /vhost_test
     # 交换机的回调函数配置
