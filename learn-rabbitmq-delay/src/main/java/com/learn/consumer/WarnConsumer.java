@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Title warnConsumer
  * @Description 备份交换机——警报队列——报警消费者
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/12 15:22
  * @Version 1.0
  */

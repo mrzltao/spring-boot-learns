@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * @Title PriorityConfig
  * @Description 优先级队列
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/12 17:00
  * @Version 1.0
  */

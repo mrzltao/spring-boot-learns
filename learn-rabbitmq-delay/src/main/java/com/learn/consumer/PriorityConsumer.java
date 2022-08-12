@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Title PriorityConsumer
  * @Description 优先级队列消费者
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/12 17:15
  * @Version 1.0
  */

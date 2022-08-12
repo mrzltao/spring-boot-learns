@@ -2,7 +2,7 @@ package com.learn.constants;
 
 /**
  * @Title RabbitMqConstants
- * @Description TODO
+ * @Description 常量
  * @Author Ltter
  * @Date 2022/8/10 16:36
  * @Version 1.0

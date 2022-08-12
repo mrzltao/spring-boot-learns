@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @Title PriorityController
  * @Description 优先级队列示例
- * @Author ZLT
+ * @Author Ltter
  * @Date 2022/8/12 17:07
  * @Version 1.0
  */
