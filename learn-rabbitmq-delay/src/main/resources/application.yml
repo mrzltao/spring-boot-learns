@@ -3,7 +3,7 @@ spring:
   rabbitmq:
     host: 192.168.1.117
     port: 5672
-    username: Ltter
+    username: zlt
     password: 123
     # 设置虚拟库时，必须以“/”开头
     virtual-host: /vhost_test

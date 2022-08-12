@@ -1,6 +1,6 @@
 package com.learn.topic;
 
-import com.learn.RabbitMQTypeEnum;
+import com.learn.utils.RabbitMQTypeEnum;
 import com.learn.utils.RabbitConnectionUtils;
 import com.rabbitmq.client.Channel;
 

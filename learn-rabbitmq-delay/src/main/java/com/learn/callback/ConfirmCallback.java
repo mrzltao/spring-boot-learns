@@ -51,7 +51,7 @@ public class ConfirmCallback implements RabbitTemplate.ConfirmCallback,RabbitTem
         if (ack){
             log.info("交换机：{} 接收消息成功", RabbitMqConstants.CONFIRM_EXCHANGE);
         }else {
-            log.info("交换机：{} 因为 {} 原因接收消息失败", RabbitMqConstants.CONFIRM_EXCHANGE, cause);
+            log.info("回调？—交换机：{} 因为 {} 原因接收消息失败", RabbitMqConstants.CONFIRM_EXCHANGE, cause);
         }
     }
 
@@ -68,7 +68,7 @@ public class ConfirmCallback implements RabbitTemplate.ConfirmCallback,RabbitTem
     @SneakyThrows
     @Override
     public void returnedMessage(ReturnedMessage returned) {
-        log.info("失败的交换机：{} 失败的routing-key：{} 消息：{} 编码：{} 原因：{}"
+        log.info("回调？—失败的交换机：{} 失败的routing-key：{} 消息：{} 编码：{} 原因：{}"
                 , returned.getExchange()
                 , returned.getRoutingKey()
                 , new String(returned.getMessage().getBody(), "utf-8")

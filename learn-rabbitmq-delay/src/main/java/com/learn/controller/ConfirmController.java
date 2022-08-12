@@ -38,8 +38,8 @@ public class ConfirmController {
         rabbitTemplate.convertAndSend(RabbitMqConstants.CONFIRM_EXCHANGE,RabbitMqConstants.CONFIRM_ROUTING_KEY, msg, correlationData);
         log.info("成功——发布确认高级——生产的消息为：{}", msg);
         rabbitTemplate.convertAndSend(RabbitMqConstants.CONFIRM_EXCHANGE + "1",RabbitMqConstants.CONFIRM_ROUTING_KEY, msg+"-交换机接收失败", correlationData);
-        log.info("交换机接收失败——发布确认高级——生产的消息为：{}", msg+"-交换机接收失败");
+        log.info("交换机接收失败—警报？—发布确认高级——生产的消息为：{}", msg+"-交换机接收失败");
         rabbitTemplate.convertAndSend(RabbitMqConstants.CONFIRM_EXCHANGE,RabbitMqConstants.CONFIRM_ROUTING_KEY + "1", msg+"-队列接收失败", correlationData);
-        log.info("队列接收失败——发布确认高级——生产的消息为：{}", msg+"-队列接收失败");
+        log.info("队列接收失败—警报—发布确认高级——生产的消息为：{}", msg+"-队列接收失败");
     }
 }

@@ -1,8 +1,7 @@
 package com.learn.dead;
 
-import com.learn.RabbitMQTypeEnum;
+import com.learn.utils.RabbitMQTypeEnum;
 import com.learn.utils.RabbitConnectionUtils;
-import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 
 /**
