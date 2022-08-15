@@ -7,7 +7,7 @@ import com.rabbitmq.client.DeliverCallback;
 
 /**
  * @Title ConsumerNormal
- * @Description TODO
+ * @Description 消费者3
  * @Author Ltter
  * @Date 2022/8/9 10:14
  * @Version 1.0

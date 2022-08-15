@@ -9,7 +9,7 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * @Title RabbitConnectionUtils
- * @Description TODO
+ * @Description 工具类
  * @Author Ltter
  * @Date 2022/8/4 13:55
  * @Version 1.0
@@ -60,9 +60,9 @@ public class RabbitConnectionUtils {
         //设置端口
         factory.setPort(5672);
         //用户名
-        factory.setUsername("Ltter");
+        factory.setUsername("guest");
         //密码
-        factory.setPassword("123");
+        factory.setPassword("guest");
         //设置虚拟库
         factory.setVirtualHost("/vhost_test");
         //创建连接

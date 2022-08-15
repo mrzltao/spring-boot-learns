@@ -8,7 +8,7 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * @Title ProducerRabbit
- * @Description TODO
+ * @Description 生产者
  * @Author Ltter
  * @Date 2022/8/4 13:55
  * @Version 1.0

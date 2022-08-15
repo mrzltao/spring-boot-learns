@@ -6,7 +6,7 @@ import com.rabbitmq.client.Channel;
 
 /**
  * @Title ProducerDirect
- * @Description TODO
+ * @Description Direct路由类型
  * @Author Ltter
  * @Date 2022/8/8 16:52
  * @Version 1.0

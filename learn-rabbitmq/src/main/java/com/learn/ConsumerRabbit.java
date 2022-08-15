@@ -5,7 +5,7 @@ import com.rabbitmq.client.*;
 
 /**
  * @Title ConsumerRabbit
- * @Description TODO
+ * @Description 消费者
  * @Author Ltter
  * @Date 2022/8/4 14:50
  * @Version 1.0
