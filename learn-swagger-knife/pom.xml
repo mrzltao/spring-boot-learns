@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>SpringBootLearns</artifactId>
+        <groupId>spring.boot.learns</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>learn-swagger-knife</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <!--注：
+            在项目中一般将knife4j和knife4j-micro俩个依赖放入根pom中，
+            若是微服务项目并使用了gateway的情况下，将knife4j依赖放入gateway中，
+            knife4j-micro在其它微服务中，一般放common中，以避免依赖臃肿。
+            -->
+        <!--knife4j：swagger的升级版本；引用所有的knife4j提供的资源，包括前端Ui的jar包-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <!--knife4j-micro：在Spring Cloud的微服务架构下，每个微服务其实并不需要引入前端的Ui资源，
+            因此在每个微服务的Spring Boot项目下，引入knife4j提供的微服务starter
+            -->
+        <!--<dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+            <version>2.0.2</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.4.17</version>
+        </dependency>
+    </dependencies>
+
+</project>

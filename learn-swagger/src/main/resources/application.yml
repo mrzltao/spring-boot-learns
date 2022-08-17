@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: learn-swagger
+
+swagger:
+  enabled: true;
+  contact-name: Ltter
+  contact-url: https://www.baidu.com/
+  contact-email: 6723885439275@qq.com
+  title: 测试Swagger服务
+  version: v1.0
+  description: Swagger描述
+  license: 1.1.1
+  license-url: https://blog.csdn.net/u013812135?type=blog
+  terms-of-service-url: https://blog.csdn.net/u013812135/article/details/121357346?spm=1001.2014.3001.5502

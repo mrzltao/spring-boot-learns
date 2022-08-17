@@ -46,6 +46,9 @@
         <module>learn-redis</module>
         <module>learn-rabbitmq</module>
         <module>learn-rabbitmq-delay</module>
+        <module>learn-swagger</module>
+        <module>learn-swagger3</module>
+        <module>learn-swagger-knife</module>
     </modules>
 
     <dependencies>

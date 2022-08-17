@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>SpringBootLearns</artifactId>
+        <groupId>spring.boot.learns</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>learn-swagger</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <!--Swagger2使用
+            从2.10.0版本之前，是swagger2阻塞式编程，配置swagger都是用的注解@EnableSwagger2
+            从2.10.0—2.10.5，由于20年初响应式编程的出现，从2.10.0开始，配置swagger已经把注解@EnableSwagger2弃用，为区分阻塞式和响应式，
+                开始使用的注解开始分为：@EnableSwagger2WebMvc、@EnableSwagger2WebFlux。此时会出现不利于维护的问题。因此不常用。
+            基于之前2.10版本，swagger3正式推出，非阻断式升级兼容阻塞式编程和响应式编程。Swagger3将@EnableSwagger2WebMvc、
+                @EnableSwagger2WebFlux注解弃用，兼容的注解为@EnableOpenAPI或@EnableSwagger2，使用这俩个注解都可以。
+            访问：
+                swagger2：/swagger-ui.html
+                swagger3：/swagger-ui/index.html
+            -->
+        <!--springfox-swagger2：Swagger2核心依赖-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <!--springfox-swagger-ui：界面支持；为项目提供API界面的展示和测试-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
