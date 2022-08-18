@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learn.mapper.MlTestMapper">
+    <select id="find" resultType="com.learn.entity.MlTest">
+        select * from ml_test
+    </select>
+    <insert id="insertOne">
+        insert into ml_test(id, t_name, age, birthday)
+        VALUES(#{tt.id},#{tt.tName},#{tt.age},#{tt.birthday})
+    </insert>
+</mapper>

@@ -49,6 +49,7 @@
         <module>learn-swagger</module>
         <module>learn-swagger3</module>
         <module>learn-swagger-knife</module>
+        <module>learn-mybatitis</module>
     </modules>
 
     <dependencies>
