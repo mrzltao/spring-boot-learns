@@ -1,6 +1,7 @@
 package com.learn.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -25,6 +26,7 @@ import java.util.List;
  */
 @Configuration
 @EnableSwagger2
+@EnableConfigurationProperties(SwaggerProperties.class)
 public class SwaggerConfig {
 
     @Autowired

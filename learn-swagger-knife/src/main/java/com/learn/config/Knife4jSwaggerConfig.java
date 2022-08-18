@@ -37,7 +37,7 @@ public class Knife4jSwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.learn"))
                 .paths(PathSelectors.any())
                 //不显示错误的接口地址 basic-error-controller
-                .paths(Predicates.not(PathSelectors.regex("/error.*")))
+                //.paths(Predicates.not(PathSelectors.regex("/error.*")))
                 .build();
     }
 

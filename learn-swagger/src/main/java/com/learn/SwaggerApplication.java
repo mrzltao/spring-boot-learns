@@ -13,7 +13,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
  * @Version 1.0
  */
 @SpringBootApplication
-@EnableConfigurationProperties(SwaggerProperties.class)
 public class SwaggerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SwaggerApplication.class);
